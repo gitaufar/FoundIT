@@ -538,6 +538,9 @@ fun HomeScreen(
                                 CardCategory(
                                     onClick = {
                                         var filter = text.uppercase()
+                                        if(filter.contains(" ")){
+                                            filter = filter.replace(" ", "_")
+                                        }
                                         if (filter == kategori) {
                                             kategori = ""
                                             if (temuan) {
